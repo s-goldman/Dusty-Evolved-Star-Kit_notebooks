@@ -9,7 +9,7 @@ setup(name='Dusty-Evolved-Star-Kit_notebooks',
       install_requires=[
           "astropy",
           "h5py",
-          "astropy"
+          "astropy",
           "numpy",
           "matplotlib",
           "ipywidgets",
