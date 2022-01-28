@@ -1,6 +1,5 @@
 # Steve Goldman, Space Telescope Science Institute, sgoldman@stsci.edu
 import os
-import ipdb
 import numpy as np
 import h5py
 from shutil import copyfile
