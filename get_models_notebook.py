@@ -64,10 +64,10 @@ def get_remote_models(model_grid_name):
     )
 
     copyfile(
-        fname_dld_outputs, desk_path + "models/" + model_grid_name + "_outputs.hdf5"
+        fname_dld_outputs, model_grid_name + "_outputs.hdf5"
     )
     copyfile(
-        fname_dld_models, desk_path + "models/" + model_grid_name + "_models.hdf5"
+        fname_dld_models, model_grid_name + "_models.hdf5"
     )
     # \n Padova options: J400, J1000, H11, R12, R13'
 
@@ -94,8 +94,8 @@ def check_models(model_grid, respond, size_filename="desk_model_grid_sizes.csv")
 
     """
 
-    outputs_file = desk_path + "models/" + model_grid + "_outputs.hdf5"
-    models_file = desk_path + "models/" + model_grid + "_models.hdf5"
+    outputs_file = model_grid + "_outputs.hdf5"
+    models_file = model_grid + "_models.hdf5"
 
     # Checks if grid is available
     if os.path.isfile(outputs_file) and os.path.isfile(models_file):
@@ -105,6 +105,6 @@ def check_models(model_grid, respond, size_filename="desk_model_grid_sizes.csv")
     else:
         # asks if you want to download the models
         if respond == True:
-            print("Models not found locally")
+            print("Models not found locally, downloading . . .")
         get_remote_models(model_grid)
     return (outputs_file, models_file)
