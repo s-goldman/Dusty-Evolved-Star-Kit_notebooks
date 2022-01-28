@@ -8,7 +8,6 @@ setup(name='Dusty-Evolved-Star-Kit_notebooks',
       url='https://s-goldman.github.io//',
       install_requires=[
           "astropy",
-          "os",
           "h5py",
           "shutil",
           "astropy"
