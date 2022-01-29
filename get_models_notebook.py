@@ -104,6 +104,6 @@ def check_models(model_grid, respond, size_filename="desk_model_grid_sizes.csv")
     else:
         # asks if you want to download the models
         if respond == True:
-            print("Models not found locally, downloading . . .")
+            print("Models not found locally \n Downloading to remote repository \n\n . . . please wait . . .")
         get_remote_models(model_grid)
     return (outputs_file, models_file)
